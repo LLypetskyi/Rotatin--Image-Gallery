@@ -1,0 +1,30 @@
+.btn-container {
+    position: relative;
+    width: 80%;
+   
+    .btn {
+        position: absolute;
+        margin: 10px;
+        width: 100px;
+        text-align: center;
+        bottom: -80px;
+        background: gray;
+        color: whitesmoke;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+
+        &:hover {
+            filter: brightness(1.5);
+        }
+
+        &#prev {
+            right: 20%;
+        }
+
+        &#next {
+            left: 20%;
+        }
+    }
+}
