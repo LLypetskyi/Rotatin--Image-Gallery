@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UpdateGaleryService } from 'src/app/services/update-galery.service';
 
 @Component({
   selector: 'app-buttons',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private updateGaleryService: UpdateGaleryService) { }
 
   ngOnInit(): void {
+  }
+ 
+  showNext() {
+    this.updateGaleryService.nextEl();
+  }
+
+  showPrev() {
+    this.updateGaleryService.prevEl();
   }
 
 }
